@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type ="text/javascript" src ="jquery.js"></script>
+    <title>Slider</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="box__left"></div>
+            <div class="box__right">
+                <p>Skup drugih elemenata na stranici</p>
+            </div>
+        </div>
+    
+
+        <!--  slike  -->
+        <div class="content">
+            <!--  gornji slider  -->
+            <div class="top__row">
+                <div class="slider__top">
+                    <img src="/Assets/slider-image-7.jpg">
+                    <img src="/Assets/slider-image-6.jpg">
+                    <img src="/Assets/slider-image-9.jpg">
+                    <img src="/Assets/slider-image-8.jpg">
+                    <img src="/Assets/slider-image-5.jpg"> 
+                </div>
+            </div>
+            <!--  donji slider  -->
+            <div class="bottom__row">
+                <div class="slider__bottom">
+                    <img src="/Assets/slider-image-9.jpg">
+                    <img src="/Assets/slider-image-4.jpg">
+                    <img src="/Assets/slider-image-1.jpg">
+                    <img src="/Assets/slider-image-2.jpg">
+                    <img src="/Assets/slider-image-3.jpg">
+                </div>
+                
+            </div>
+
+            <!--  gumbi  -->
+            <div class="btn">
+                <div class="btn__prev"><img src="Assets/arrow-gray-left.png"></div>
+                <div class="btn__next"><img src="Assets/arrow-blue-right.png"></div>
+                </div>
+
+            <!--  desni tekst  -->
+            <div class="right__copy">
+                <h1>Lorem ipsum dolor sit amet consectetuer adipiscing elit</h1>
+                <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+            </div>
+        </div>
+
+        <!--  footer  -->
+        <div class="footer">
+            <p>Skup drugih elemenata na stranici</p>
+        </div>
+    </div>
+    
+    <script>
+        $(document).ready(function(){
+        $('.btn__next').click(function(){
+            $('.slider__top').animate({'right':'+=200px'});
+            $('.slider__bottom').animate({'right':'+=200px'});
+        });
+    });
+
+    $(document).ready(function(){
+        $('btn__prev').click(function(){
+            $('slider__top').animate({'right':'-=200px'});
+            $('slider__bottom').animate({'right':'-=200px'});
+        });
+    });
+    </script>
+</body>
+</html>
