@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script type ="text/javascript" src ="jquery.js"></script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <script type ="text/javascript" src ="/js/jquery.js"></script>
+    <script type ="text/javascript" src ="/js/slider.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;700&display=swap" rel="stylesheet">
+
     <title>Slider</title>
 </head>
 <body>
@@ -45,8 +50,8 @@
 
             <!--  gumbi  -->
             <div class="btn">
-                <div class="btn__prev"><img src="Assets/arrow-gray-left.png"></div>
-                <div class="btn__next"><img src="Assets/arrow-blue-right.png"></div>
+                <button class="btn__prev" id="prevBtn" onClick="previous()"></button>
+                <button class="btn__next" id="nextBtn" onClick="next()"></button>
                 </div>
 
             <!--  desni tekst  -->
@@ -63,20 +68,5 @@
         </div>
     </div>
     
-    <script>
-        $(document).ready(function(){
-        $('.btn__next').click(function(){
-            $('.slider__top').animate({'right':'+=200px'});
-            $('.slider__bottom').animate({'right':'+=200px'});
-        });
-    });
-
-    $(document).ready(function(){
-        $('btn__prev').click(function(){
-            $('slider__top').animate({'right':'-=200px'});
-            $('slider__bottom').animate({'right':'-=200px'});
-        });
-    });
-    </script>
 </body>
 </html>
